@@ -5,7 +5,7 @@ result = []
 result_split = []
 dics = []
 
-for i in range(2, 101):
+for i in range(2, 501):
     expect.append(expect[i - 1] + expect[i - 2])
 with open('out', 'r') as f:
     tmp = f.readline()

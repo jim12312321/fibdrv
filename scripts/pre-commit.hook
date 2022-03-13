@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
-CPPCHECK_suppresses="--suppress=missingIncludeSystem"
+CPPCHECK_suppresses="--suppress=missingIncludeSystem\
+	--suppress=shiftTooManyBitsSigned:fibdrv.c\
+	--suppress=variableScope:fibdrv.c\
+	--suppress=variableScope:client.c"
 CPPCHECK_OPTS="-I. --enable=all --error-exitcode=1 --force $CPPCHECK_suppresses ."
 
 RETURN=0
