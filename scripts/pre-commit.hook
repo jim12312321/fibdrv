@@ -3,6 +3,8 @@
 CPPCHECK_suppresses="--suppress=missingIncludeSystem\
 	--suppress=shiftTooManyBitsSigned:fibdrv.c\
 	--suppress=variableScope:fibdrv.c\
+	--suppress=shiftTooManyBitsSigned:fast_fibdrv.c\
+        --suppress=variableScope:fast_fibdrv.c\
 	--suppress=variableScope:client.c"
 CPPCHECK_OPTS="-I. --enable=all --error-exitcode=1 --force $CPPCHECK_suppresses ."
 
